@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap');
+
+@keyframes hidePage {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        transform: scale(0.5) translateX(-150%);
+    }
+    
+    100%{
+        transform: scale(0.1) translateX(0);
+        opacity: 0;
+        
+        
+    }  
+}
+
+@keyframes showPage {
+    0%{
+        transform: scale(0.1) translateX(0);
+    }
+    50%{
+        transform: scale(0.5) translateX(150%);
+    }
+    
+    100%{
+        
+        opacity: 1;
+    }
+}
+
+@keyframes reverseHidePage {
+        0%{
+            opacity: 1;
+        }
+        50%{
+            transform: scale(0.5) translateX(150%);
+        }
+        
+        100%{
+            transform: scale(0.1) translateX(0);
+            opacity: 0;
+            
+            
+        }  
+}
+
+@keyframes reverseShowPage {
+        0%{
+            transform: scale(0.1) translateX(0);
+        }
+        50%{
+            transform: scale(0.5) translateX(-150%);
+        }
+        
+        100%{
+            
+            opacity: 1;
+        }
+}
+    
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color:white;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgb(52,52,52);
+    background: radial-gradient(circle, rgba(52,52,52,1) 25%, rgba(24,24,24,1) 100%);
+}
+    /* ABOUT ME */
+.about-me{
+    position: absolute;
+    z-index: 1;
+    opacity: 1;
+    width: 1000px;
+    height: 700px;
+    border-radius: 10px;
+    background-color: rgba(52,52,52,1);
+    filter: drop-shadow(0px 0px 20px #000);
+
+    display: flex;
+}
+
+
+.about-me-content{
+    width: 60%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-me-heading{
+    position: relative;
+    bottom: 10%;
+    text-align: center;
+    font-size: 35px;
+}
+
+.about-me-paragraph{
+    margin-block: 10px;
+    padding-left: 80px;
+    font-size: 20px;
+}
+
+.about-me-photo{
+    width: 40%;
+    height: 100%;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+ 
+}
+
+.personal-photo{
+    position: relative;
+    border: solid 8px transparent;
+    border-radius: 50%;
+    right:15px;
+    top:15px;
+    filter: drop-shadow(0 0 6px white);
+            
+}    
+
+.personal-photo:hover{
+    filter: drop-shadow(0 0 10px white);
+
+}
+
+    /* SKILLS */
+.skills{
+    position: absolute;
+    opacity: 0;
+    width: 1000px;
+    height: 700px;
+    border-radius: 10px;
+    background-color: rgba(52,52,52,1);
+    filter: drop-shadow(0px 0px 20px #000);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.skill-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.skill-name{
+    width: 200px;
+    display: flex;
+    align-items: center;
+}
+
+.skill-point{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+.point{
+    position: relative;
+    bottom: 10%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: purple;
+}
+
+.html-first-point, .html-second-point, .html-third-point{
+    background-color: aquamarine;
+}
+
+.css-first-point, .css-second-point{
+    background-color: aquamarine;
+}
+
+.js-first-point, .js-second-point{
+    background-color: aquamarine;
+}
+
+.sql-first-point, .sql-second-point, .sql-third-point{
+    background-color: aquamarine;
+}
+
+.description{
+    text-align: center;
+    position: relative;
+    top: 10%;
+    font-weight: bold;
+    font-size:20px;
+}
+    /* EXPERIENCE */
+.experience{
+    position: absolute;
+    opacity: 0;
+    width: 1000px;
+    height: 700px;
+    border-radius: 10px;
+    background-color: rgba(52,52,52,1);
+    filter: drop-shadow(0px 0px 20px #000);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.experience-heading{
+    text-align: center;
+}
+
+.first-job, .second-job{
+    display: flex;
+}
+
+.company-name{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.work-decription{
+    width: 50%;
+    font-size: 25px;
+}
+    /* EDUCATION */
+.education{
+    position: absolute;
+    opacity: 0;
+    width: 1000px;
+    height: 700px;
+    border-radius: 10px;
+    background-color: rgba(52,52,52,1);
+    filter: drop-shadow(0px 0px 20px #000);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.education-heading{
+    text-align: center;
+}
+
+.first-school, .second-school{
+    display: flex;
+
+}
+
+.school-name{
+    padding-left: 35px;
+}
+
+.school-name, .school-decription{
+    width: 50%;
+}
+
+.school-decription{
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+}
+
+    /* CONTACT */
+.contact{
+    position: absolute;
+    opacity: 0;
+    width: 1000px;
+    height: 700px;
+    border-radius: 10px;
+    background-color: rgba(52,52,52,1);
+    filter: drop-shadow(0px 0px 20px #000);
+    font-size: 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.references{
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+}
+
+    /* NAV */
+.nav{
+    position: relative;
+    width: 65px;
+    height: 65px;
+    top: 500px;
+    margin-inline: 100px;
+
+    border-radius: 10px;
+    background-color: rgba(52,52,52,1);
+    filter: drop-shadow(0px 0px 5px white);
+}
+
+.nav:hover{
+    transform: scale(1.1);
+}
+
+.nav:active{
+    transform: scale(0.7);
+}
+
+.left-button{
+    opacity: 0;
+}
+
+h2:hover{
+    filter: drop-shadow(0 2px 5px white);
+}
